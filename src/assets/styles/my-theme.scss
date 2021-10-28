@@ -1,0 +1,124 @@
+@import "~@angular/material/theming";
+
+@include mat-core();
+
+// COLOR RANGE
+$my-primary-color: (
+  50: #ffffff,
+  100: #ffffff,
+  200: #ffffff,
+  300: #ffffff,
+  400: #ffffff,
+  500: #ffffff,
+  600: #ffffff,
+  700: #ffffff,
+  800: #ffffff,
+  900: #ffffff,
+  A100: #ffffff,
+  A200: #ffffff,
+  A400: #ffffff,
+  A700: #ffffff,
+  contrast: (
+    50: #000000,
+    100: #000000,
+    200: #000000,
+    300: #000000,
+    400: #000000,
+    500: #000000,
+    600: #000000,
+    700: #000000,
+    800: #000000,
+    900: #000000,
+    A100: #000000,
+    A200: #000000,
+    A400: #000000,
+    A700: #000000,
+  ),
+);
+
+$my-accent-color: (
+  50: #e5e5e5,
+  100: #bfbfbf,
+  200: #949494,
+  300: #696969,
+  400: #484848,
+  500: #282828,
+  600: #242424,
+  700: #1e1e1e,
+  800: #181818,
+  900: #0f0f0f,
+  A100: #ee6767,
+  A200: #e93a3a,
+  A400: #f00000,
+  A700: #d60000,
+  contrast: (
+    50: #000000,
+    100: #000000,
+    200: #000000,
+    300: #ffffff,
+    400: #ffffff,
+    500: #ffffff,
+    600: #ffffff,
+    700: #ffffff,
+    800: #ffffff,
+    900: #ffffff,
+    A100: #000000,
+    A200: #ffffff,
+    A400: #ffffff,
+    A700: #ffffff,
+  ),
+);
+
+$my-warn-color: (
+  50: #fee8e7,
+  100: #fcc7c3,
+  200: #faa19b,
+  300: #f77b72,
+  400: #f65f54,
+  500: #f44336,
+  600: #f33d30,
+  700: #f13429,
+  800: #ef2c22,
+  900: #ec1e16,
+  A100: #ffffff,
+  A200: #ffe9e9,
+  A400: #ffb8b6,
+  A700: #ff9f9c,
+  contrast: (
+    50: #000000,
+    100: #000000,
+    200: #000000,
+    300: #000000,
+    400: #000000,
+    500: #ffffff,
+    600: #ffffff,
+    700: #ffffff,
+    800: #ffffff,
+    900: #ffffff,
+    A100: #000000,
+    A200: #000000,
+    A400: #000000,
+    A700: #000000,
+  ),
+);
+
+// PALETA DE COLORES
+$my-palette-primary: mat-palette($my-primary-color);
+$my-palette-accent: mat-palette($my-accent-color);
+$my-palette-warn: mat-palette($my-warn-color);
+
+// TEMA PROPIO
+$my-theme: mat-dark-theme(
+  (
+    color: (
+      primary: $my-palette-primary,
+      accent: $my-palette-accent,
+      warn: $my-palette-warn,
+    ),
+  )
+);
+
+// APLICAR NUESTRO TEMA A ANGULAR
+@include angular-material-theme($my-theme);
+
+// "src/assets/styles/my-theme.scss",
