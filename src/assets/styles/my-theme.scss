@@ -120,5 +120,3 @@ $my-theme: mat-dark-theme(
 
 // APLICAR NUESTRO TEMA A ANGULAR
 @include angular-material-theme($my-theme);
-
-// "src/assets/styles/my-theme.scss",
