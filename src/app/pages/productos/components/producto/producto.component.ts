@@ -20,7 +20,7 @@ export class ProductoComponent implements OnInit {
   addProductToCart() {
     this._cartService.addProductsToCart(this.productData);
     // console.log(this.productData);
-    this._snackBar.open(`${this.productData.title} agregado con exito!`, 'X', {
+    this._snackBar.open(`${this.productData.title} agregado con éxito!`, 'X', {
       duration: 2500,
       // horizontalPosition: 'right',
       // verticalPosition: 'top',

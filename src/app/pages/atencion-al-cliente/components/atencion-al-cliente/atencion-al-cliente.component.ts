@@ -5,6 +5,7 @@ import {
   FormGroup,
   Validators,
 } from '@angular/forms';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-atencion-al-cliente',
@@ -31,7 +32,7 @@ export class AtencionAlClienteComponent implements OnInit {
     newsletter: [''],
   });
 
-  constructor(private fb: FormBuilder) {}
+  constructor(private fb: FormBuilder, private _snackBar: MatSnackBar) {}
 
   ngOnInit(): void {}
 
@@ -42,6 +43,9 @@ export class AtencionAlClienteComponent implements OnInit {
       if (this.formData.valid) console.log(this.formData.value);
       this.loading = false;
     }, 3000);
+    this._snackBar.open('Formulario enviado con éxito', 'x', {
+      duration: 3000,
+    });
   }
 
   resetForm() {
