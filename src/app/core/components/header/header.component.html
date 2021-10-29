@@ -16,12 +16,14 @@
     </a>
   </div>
 
-  <nav>
-    <a mat-button *ngFor="let link of links" routerLink="{{ link.path }}">
-      <mat-icon *ngIf="link.isIcon; else text"> {{ link.desc }}</mat-icon>
-      <ng-template #text>{{ link.desc }}</ng-template>
-    </a>
-  </nav>
+  <div class="navbar">
+    <nav>
+      <a mat-button *ngFor="let link of links" routerLink="{{ link.path }}">
+        <mat-icon *ngIf="link.isIcon; else text"> {{ link.desc }}</mat-icon>
+        <ng-template #text>{{ link.desc }}</ng-template>
+      </a>
+    </nav>
+  </div>
 
   <!-- <button id="menuBtn" class="header__menuBtn">
     <mat-icon>menu</mat-icon>
