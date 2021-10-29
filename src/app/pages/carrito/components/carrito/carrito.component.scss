@@ -1,0 +1,46 @@
+.background {
+  height: 76.55%;
+
+  background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)),
+    url(../../../../../assets/img/contact.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  h2 {
+    display: flex;
+    justify-content: center;
+    font-family: "Montserrat", Sans-serif;
+    font-weight: 600;
+    font-size: 28px;
+    color: #fff;
+    padding: 40px 0 0 0;
+  }
+
+  div {
+    display: flex;
+    justify-content: center;
+
+    mat-icon {
+      margin: 15px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      transform: scale(2);
+      color: #fff;
+
+      &:active {
+        transform: scale(1.6);
+        color: #fff;
+      }
+    }
+  }
+
+  h4 {
+    display: flex;
+    justify-content: center;
+    font-family: "Montserrat", Sans-serif;
+    font-size: 20px;
+    color: #fff;
+  }
+}

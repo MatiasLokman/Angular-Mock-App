@@ -3,15 +3,11 @@ import { CommonModule } from '@angular/common';
 
 import { CarritoRoutingModule } from './carrito-routing.module';
 import { CarritoComponent } from './components/carrito/carrito.component';
-
+import { ProductComponent } from './components/product/product.component';
+import { MaterialModule } from 'src/app/material/material.module';
 
 @NgModule({
-  declarations: [
-    CarritoComponent
-  ],
-  imports: [
-    CommonModule,
-    CarritoRoutingModule
-  ]
+  declarations: [CarritoComponent, ProductComponent],
+  imports: [CommonModule, CarritoRoutingModule, MaterialModule],
 })
-export class CarritoModule { }
+export class CarritoModule {}

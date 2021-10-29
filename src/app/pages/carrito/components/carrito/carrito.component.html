@@ -1,1 +1,15 @@
-<p>carrito works!</p>
+<main class="background">
+  <h2>Tu compra</h2>
+
+  <h4 *ngIf="products.length === 0">Aun no hay productos en tu carrito!</h4>
+
+  <div *ngIf="products.length === 0" mat-raised-button>
+    <a routerLink="/productos"> <mat-icon>add_shopping_cart</mat-icon></a>
+  </div>
+
+  <app-product
+    *ngFor="let product of products"
+    [productData]="product"
+    (productRemovalEvent)="getProducts()"
+  ></app-product>
+</main>
