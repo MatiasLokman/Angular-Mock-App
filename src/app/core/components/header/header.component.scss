@@ -1,24 +1,57 @@
-mat-toolbar {
+.header {
   height: 100px;
   display: flex;
-  justify-content: space-between;
+  // justify-content: space-between;
   flex-direction: row;
   padding: 0 30px;
 
-  .header__logo {
+  &__logo {
     display: flex;
     gap: 20px;
     align-items: center;
+    flex-basis: 33.33%;
+    justify-content: center;
+
+    img {
+      width: 140px;
+
+      @media (max-width: 800px) {
+        width: 135px;
+      }
+      @media (max-width: 750px) {
+        width: 130px;
+      }
+      @media (max-width: 700px) {
+        width: 125px;
+      }
+
+      @media (max-width: 600px) {
+        width: 120px;
+      }
+
+      @media (max-width: 500px) {
+        width: 115px;
+      }
+
+      @media (max-width: 400px) {
+        width: 110px;
+      }
+
+      @media (max-width: 380px) {
+        width: 105px;
+      }
+    }
   }
 
-  .header__search {
-    width: 33.3333333%;
+  &__search {
     display: flex;
     align-items: center;
     gap: 10px;
+    flex-basis: 33.33%;
+    justify-content: center;
   }
 
-  .header__search--input {
+  &__search--input {
     width: 150px;
     font-size: 15px;
     border-left: none;
@@ -27,6 +60,32 @@ mat-toolbar {
     border-bottom: 1px solid #252525;
     text-align: left;
     padding: 4px 5px;
+
+    @media (max-width: 800px) {
+      width: 120px;
+    }
+    @media (max-width: 750px) {
+      width: 100px;
+    }
+    @media (max-width: 700px) {
+      width: 90px;
+    }
+
+    @media (max-width: 600px) {
+      width: 80px;
+    }
+
+    @media (max-width: 500px) {
+      width: 80px;
+    }
+
+    @media (max-width: 400px) {
+      width: 75px;
+    }
+
+    @media (max-width: 380px) {
+      width: 75px;
+    }
 
     &::placeholder {
       color: #252525;
@@ -38,7 +97,7 @@ mat-toolbar {
     }
   }
 
-  .header__search--btn {
+  &__search--btn {
     color: #252525;
     border: none;
     background: none;
@@ -50,7 +109,11 @@ mat-toolbar {
     }
   }
 
-  nav {
+  &__navbar {
+    display: flex;
+    flex-basis: 33.33%;
+    justify-content: center;
+    align-items: center;
     color: #252525;
 
     .mat-button {
@@ -59,26 +122,22 @@ mat-toolbar {
     }
   }
 
-  img {
-    width: 140px;
-  }
+  //   .header__menuBtn {
+  //     background: none;
+  //     border: none;
+  //     cursor: pointer;
+  //     color: #252525;
+  //     transform: scale(2);
 
-  // .header__menuBtn {
-  //   background: none;
-  //   border: none;
-  //   cursor: pointer;
-  //   color: #252525;
-  //   transform: scale(2);
-
-  //   &:active {
-  //     transform: scale(1.5);
+  //     &:active {
+  //       transform: scale(1.5);
+  //     }
   //   }
   // }
-}
 
-// .hidden {
-//   display: none;
-//   @media (min-width: 740px) {
-//     display: flex;
-//   }
-// }
+  // .hidden {
+  //   display: none;
+  //   @media (min-width: 740px) {
+  //     display: flex;
+  //   }
+}

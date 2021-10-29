@@ -1,4 +1,4 @@
-<mat-toolbar color="primary">
+<mat-toolbar class="header" color="primary">
   <div class="header__search">
     <input class="header__search--input" type="text" placeholder="Buscar" />
     <button class="header__search--btn">
@@ -16,7 +16,7 @@
     </a>
   </div>
 
-  <div class="navbar">
+  <div class="header__navbar">
     <nav>
       <a mat-button *ngFor="let link of links" routerLink="{{ link.path }}">
         <mat-icon *ngIf="link.isIcon; else text"> {{ link.desc }}</mat-icon>
@@ -25,7 +25,12 @@
     </nav>
   </div>
 
-  <!-- <button id="menuBtn" class="header__menuBtn">
+  <!-- <button
+    (click)="toggleMenu()"
+    id="menuBtn"
+    class="header__menuBtn"
+    opened="opened"
+  >
     <mat-icon>menu</mat-icon>
   </button> -->
 </mat-toolbar>
