@@ -1,0 +1,16 @@
+.background {
+  background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)),
+    url(../../../../../assets/img/products.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+h2 {
+  text-align: left;
+  font-size: 28px;
+  font-family: "Montserrat", Sans-serif;
+  font-weight: 600;
+  padding: 40px 0 25px 400px;
+  color: #fff;
+}

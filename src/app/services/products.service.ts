@@ -1,9 +1,16 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class ProductsService {
+  private productsData: any;
+  private productsUrl = 'https://fakestoreapi.com/products';
 
-  constructor() { }
+  constructor(private http: HttpClient) {}
+
+  getData() {
+    return this.http.get(this.productsUrl);
+  }
 }

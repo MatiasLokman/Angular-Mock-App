@@ -1,0 +1,31 @@
+mat-card {
+  text-align: center;
+  display: flex;
+  align-items: baseline;
+  flex-direction: column;
+  height: 400px;
+  // margin: 0 28px 0 28px;
+
+  h4 {
+    height: 100px;
+    text-align: center;
+    margin: auto;
+  }
+
+  img {
+    height: 250px;
+    width: 250px;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  div {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    button:active {
+      transform: scale(0.95);
+    }
+  }
+}
