@@ -1,1 +1,86 @@
-<p>atencion-al-cliente works!</p>
+<mat-card class="form__container">
+  <h1>Atención al Cliente</h1>
+  <form [formGroup]="formData" (ngSubmit)="submitForm()" class="form">
+    <mat-form-field appearance="fill">
+      <mat-label>Nombre</mat-label>
+      <input matInput formControlName="name" placeholder="Nombre" type="text" />
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Email</mat-label>
+      <input
+        matInput
+        formControlName="email"
+        email="email"
+        placeholder="Email"
+        type="email"
+      />
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Teléfono</mat-label>
+      <input
+        matInput
+        formControlName="phone"
+        placeholder="Teléfono"
+        type="number"
+      />
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Mensaje</mat-label>
+      <textarea
+        matInput
+        formControlName="message"
+        placeholder="Describir mensaje..."
+        type="text"
+      ></textarea>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>¿Cómo nos conociste?</mat-label>
+      <mat-select formControlName="link">
+        <mat-option value="Instagram">Instagram</mat-option>
+        <mat-option value="Facebook">Facebook</mat-option>
+        <mat-option value="option3">Amigos/Conocidos</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-radio-group
+      class="form__radio"
+      formControlName="genre"
+      appearance="fill"
+      color="primary"
+      aria-label="Seleccione una opción"
+    >
+      <mat-radio-button value="masc">Masculino</mat-radio-button>
+      <mat-radio-button value="fem">Femenino</mat-radio-button>
+      <mat-radio-button value="otro">Otro</mat-radio-button>
+    </mat-radio-group>
+
+    <div class="form__checkbox">
+      <label for="newsletter"> <h4>Suscribirse al Newsletter</h4></label>
+      <mat-checkbox
+        formControlName="newsletter"
+        type="checkbox"
+        color="primary"
+        id="newsletter"
+      >
+      </mat-checkbox>
+    </div>
+
+    <div class="form__buttons">
+      <button mat-raised-button color="primary" type="submit">Enviar</button>
+      <button
+        mat-raised-button
+        color="warn"
+        (click)="resetForm()"
+        type="submit"
+      >
+        Resetear Formulario
+      </button>
+    </div>
+  </form>
+</mat-card>
+
+<app-spinner [loading]="loading"></app-spinner>
