@@ -9,5 +9,11 @@ import { ProductsService } from 'src/app/services/products.service';
 export class ProductosComponent implements OnInit {
   constructor() {}
 
+  loading = false;
+
   ngOnInit(): void {}
+
+  setLoading(loadingState: boolean) {
+    this.loading = loadingState;
+  }
 }
