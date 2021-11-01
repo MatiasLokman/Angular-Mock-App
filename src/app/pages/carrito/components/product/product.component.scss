@@ -1,6 +1,11 @@
 mat-card {
   img {
-    max-height: 100px;
+    height: 150px;
+    width: 150px;
     object-fit: cover;
+  }
+
+  .price {
+    font-weight: 500;
   }
 }
