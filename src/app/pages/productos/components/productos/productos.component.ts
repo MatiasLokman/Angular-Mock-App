@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductsService } from 'src/app/services/products.service';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-productos',
@@ -7,13 +8,20 @@ import { ProductsService } from 'src/app/services/products.service';
   styleUrls: ['./productos.component.scss'],
 })
 export class ProductosComponent implements OnInit {
-  constructor() {}
+  title = 'changeBrowserTitle';
+  constructor(private titleService: Title) {}
 
   loading = true;
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.titleService.setTitle('LOK | Productos');
+  }
 
   setLoading(loadingState: boolean) {
     this.loading = loadingState;
+  }
+
+  public setTitle(newTitle: string) {
+    this.titleService.setTitle('Holaaaaaa');
   }
 }

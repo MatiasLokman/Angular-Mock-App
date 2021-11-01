@@ -7,6 +7,7 @@ import {
   Validators,
 } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-atencion-al-cliente',
@@ -33,9 +34,15 @@ export class AtencionAlClienteComponent implements OnInit {
     newsletter: [''],
   });
 
-  constructor(private fb: FormBuilder, private _snackBar: MatSnackBar) {}
+  constructor(
+    private fb: FormBuilder,
+    private _snackBar: MatSnackBar,
+    private titleService: Title
+  ) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.titleService.setTitle('LOK | Contacto');
+  }
 
   submitForm() {
     this.loading = true;
