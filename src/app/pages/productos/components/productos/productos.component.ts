@@ -9,7 +9,7 @@ import { ProductsService } from 'src/app/services/products.service';
 export class ProductosComponent implements OnInit {
   constructor() {}
 
-  loading = false;
+  loading = true;
 
   ngOnInit(): void {}
 

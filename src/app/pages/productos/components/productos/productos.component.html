@@ -1,4 +1,7 @@
-<div class="background">
+<div
+  class="background"
+  [ngClass]="loading ? 'backgroundLoading' : 'backgroundLoaded'"
+>
   <main>
     <h2>Productos</h2>
 
