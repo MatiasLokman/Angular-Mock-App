@@ -37,15 +37,18 @@ export class AtencionAlClienteComponent implements OnInit {
   ngOnInit(): void {}
 
   submitForm() {
-    this.loading = true;
-    setTimeout(() => {
-      if (this.formData.valid) console.log(this.formData.value);
-      if (this.formData.valid) console.log(this.formData.value);
-      this.loading = false;
-    }, 3000);
-    this._snackBar.open('Formulario enviado con éxito', 'x', {
-      duration: 3000,
-    });
+    if (this.formData.valid) {
+      this.loading = true;
+      setTimeout(() => {
+        if (this.formData.valid) console.log(this.formData.value);
+        this.loading = false;
+
+        this._snackBar.open('Formulario enviado con éxito', 'x', {
+          duration: 3000,
+        });
+      }, 3000);
+      this.formData.reset();
+    }
   }
 
   resetForm() {
