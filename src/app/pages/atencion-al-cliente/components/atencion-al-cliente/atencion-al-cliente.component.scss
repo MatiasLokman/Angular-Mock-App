@@ -1,6 +1,6 @@
 .form {
   &__container {
-    height: 73.1%;
+    min-height: 73%;
     margin: 0px;
     display: flex;
     flex-direction: column;
@@ -15,6 +15,10 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+
+    .space {
+      margin: 0px 0px 4px 0px;
+    }
 
     h1 {
       padding: 40px 0 0 0;

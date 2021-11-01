@@ -1,7 +1,7 @@
 <mat-card class="form__container">
   <h1>Atención al Cliente</h1>
   <form [formGroup]="formData" (ngSubmit)="submitForm()" class="form">
-    <mat-form-field appearance="fill">
+    <mat-form-field appearance="fill" class="space">
       <mat-label>Nombre</mat-label>
       <input matInput formControlName="name" placeholder="Nombre" type="text" />
       <mat-error *ngIf="formData.get('name')?.hasError('required')">
@@ -9,7 +9,7 @@
       >
     </mat-form-field>
 
-    <mat-form-field appearance="fill">
+    <mat-form-field appearance="fill" class="space">
       <mat-label>Email</mat-label>
       <input
         matInput
@@ -26,7 +26,7 @@
       >
     </mat-form-field>
 
-    <mat-form-field appearance="fill">
+    <mat-form-field appearance="fill" class="space">
       <mat-label>Teléfono (opcional)</mat-label>
       <input
         matInput
@@ -36,7 +36,7 @@
       />
     </mat-form-field>
 
-    <mat-form-field appearance="fill">
+    <mat-form-field appearance="fill" class="space">
       <mat-label>Mensaje</mat-label>
       <textarea
         matInput
