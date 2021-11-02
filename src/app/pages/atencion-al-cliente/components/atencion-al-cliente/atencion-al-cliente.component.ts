@@ -45,45 +45,50 @@ export class AtencionAlClienteComponent implements OnInit {
   }
 
   submitForm() {
-    this.loading = true;
-    setTimeout(() => {
+    if (this.formData.valid) {
+      this.loading = true;
       if (this.formData.valid) console.log(this.formData.value);
-      this.loading = false;
-      this._snackBar.open('Formulario enviado con éxito', 'x', {
-        duration: 3000,
+      setTimeout(() => {
+        this.loading = false;
+        this._snackBar.open('Formulario enviado con éxito', 'x', {
+          duration: 3000,
+        });
+      }, 3000);
+
+      // I need to save the data inside a object before setting the values to null, in order not to lose them
+      this.formData.setValue({
+        name: '',
+        email: '',
+        phone: '',
+        message: '',
+        link: '',
+        genre: '',
+        newsletter: '',
       });
-    }, 3000);
 
-    // I need to save the data inside a object before setting the values to null, in order not to lose them
-    this.formData.setValue({
-      name: '',
-      email: '',
-      phone: '',
-      message: '',
-      link: '',
-      genre: '',
-      newsletter: '',
-    });
+      this.formData.get('name')?.clearValidators();
+      this.formData.get('name')?.updateValueAndValidity();
+      this.formData.get('name')?.addValidators(Validators.required);
+      this.formData.get('name')?.updateValueAndValidity();
 
-    this.formData.get('name')?.clearValidators();
-    this.formData.get('name')?.updateValueAndValidity();
-    this.formData.get('name')?.addValidators(Validators.required);
+      this.formData.get('email')?.clearValidators();
+      this.formData.get('email')?.updateValueAndValidity();
+      this.formData
+        .get('email')
+        ?.addValidators([Validators.required, Validators.email]);
+      this.formData.get('email')?.updateValueAndValidity();
 
-    this.formData.get('email')?.clearValidators();
-    this.formData.get('email')?.updateValueAndValidity();
-    this.formData
-      .get('email')
-      ?.addValidators([Validators.required, Validators.email]);
-
-    this.formData.get('message')?.clearValidators();
-    this.formData.get('message')?.updateValueAndValidity();
-    this.formData
-      .get('message')
-      ?.addValidators([
-        Validators.required,
-        Validators.minLength(20),
-        Validators.maxLength(350),
-      ]);
+      this.formData.get('message')?.clearValidators();
+      this.formData.get('message')?.updateValueAndValidity();
+      this.formData
+        .get('message')
+        ?.addValidators([
+          Validators.required,
+          Validators.minLength(20),
+          Validators.maxLength(350),
+        ]);
+      this.formData.get('message')?.updateValueAndValidity();
+    }
   }
 
   resetForm() {
@@ -101,12 +106,14 @@ export class AtencionAlClienteComponent implements OnInit {
     this.formData.get('name')?.clearValidators();
     this.formData.get('name')?.updateValueAndValidity();
     this.formData.get('name')?.addValidators(Validators.required);
+    this.formData.get('name')?.updateValueAndValidity();
 
     this.formData.get('email')?.clearValidators();
     this.formData.get('email')?.updateValueAndValidity();
     this.formData
       .get('email')
       ?.addValidators([Validators.required, Validators.email]);
+    this.formData.get('email')?.updateValueAndValidity();
 
     this.formData.get('message')?.clearValidators();
     this.formData.get('message')?.updateValueAndValidity();
@@ -117,5 +124,6 @@ export class AtencionAlClienteComponent implements OnInit {
         Validators.minLength(20),
         Validators.maxLength(350),
       ]);
+    this.formData.get('message')?.updateValueAndValidity();
   }
 }
