@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { of } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
@@ -15,6 +16,10 @@ export class CartService {
 
   getCartProducts() {
     return this.cartProducts;
+  }
+
+  getCartLenght() {
+    return of(this.cartProducts.length);
   }
 
   removeProductFromCart(id: number) {

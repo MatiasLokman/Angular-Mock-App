@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CartService } from 'src/app/services/cart.service';
 
 @Component({
   selector: 'app-header',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent implements OnInit {
+  cartLenght = 0;
+
   links = [
     {
       path: 'inicio',
@@ -29,7 +32,19 @@ export class HeaderComponent implements OnInit {
     },
   ];
 
-  constructor() {}
+  constructor(private _cartService: CartService) {}
 
   ngOnInit(): void {}
+
+  // getCartLenght() {
+  //   this._cartService
+  //     .getCartLenght()
+  //     .subscribe((data) => (this.cartLenght = data));
+  // }
+
+  getCartLenght = () => {
+    this._cartService
+      .getCartLenght()
+      .subscribe((data) => (this.cartLenght = data));
+  };
 }
