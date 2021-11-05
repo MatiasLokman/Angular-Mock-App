@@ -55,7 +55,6 @@ export class AtencionAlClienteComponent implements OnInit {
         });
       }, 3000);
 
-      // I need to save the data inside a object before setting the values to null, in order not to lose them
       this.formData.setValue({
         name: '',
         email: '',
@@ -89,6 +88,12 @@ export class AtencionAlClienteComponent implements OnInit {
         ]);
       this.formData.get('message')?.updateValueAndValidity();
     }
+
+    // this.formData.reset();
+
+    // Object.keys(this.formData.controls).forEach((key) => {
+    //   this.formData.get(key)?.setErrors(null);
+    // });
   }
 
   resetForm() {
