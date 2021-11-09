@@ -55,41 +55,42 @@ export class AtencionAlClienteComponent implements OnInit {
         });
       }, 3000);
 
-      this.formData.setValue({
-        name: '',
-        email: '',
-        phone: '',
-        message: '',
-        link: '',
-        genre: '',
-        newsletter: '',
-      });
+      // this.formData.setValue({
+      //   name: '',
+      //   email: '',
+      //   phone: '',
+      //   message: '',
+      //   link: '',
+      //   genre: '',
+      //   newsletter: '',
+      // });
 
-      this.formData.get('name')?.clearValidators();
-      this.formData.get('name')?.updateValueAndValidity();
-      this.formData.get('name')?.addValidators(Validators.required);
-      this.formData.get('name')?.updateValueAndValidity();
+      // this.formData.get('name')?.clearValidators();
+      // this.formData.get('name')?.updateValueAndValidity();
+      // this.formData.get('name')?.addValidators(Validators.required);
+      // this.formData.get('name')?.updateValueAndValidity();
 
-      this.formData.get('email')?.clearValidators();
-      this.formData.get('email')?.updateValueAndValidity();
-      this.formData
-        .get('email')
-        ?.addValidators([Validators.required, Validators.email]);
-      this.formData.get('email')?.updateValueAndValidity();
+      // this.formData.get('email')?.clearValidators();
+      // this.formData.get('email')?.updateValueAndValidity();
+      // this.formData
+      //   .get('email')
+      //   ?.addValidators([Validators.required, Validators.email]);
+      // this.formData.get('email')?.updateValueAndValidity();
 
-      this.formData.get('message')?.clearValidators();
-      this.formData.get('message')?.updateValueAndValidity();
-      this.formData
-        .get('message')
-        ?.addValidators([
-          Validators.required,
-          Validators.minLength(20),
-          Validators.maxLength(350),
-        ]);
-      this.formData.get('message')?.updateValueAndValidity();
+      // this.formData.get('message')?.clearValidators();
+      // this.formData.get('message')?.updateValueAndValidity();
+      // this.formData
+      //   .get('message')
+      //   ?.addValidators([
+      //     Validators.required,
+      //     Validators.minLength(20),
+      //     Validators.maxLength(350),
+      //   ]);
+      // this.formData.get('message')?.updateValueAndValidity();
     }
 
-    // this.formData.reset();
+    this.formData.reset();
+
 
     // Object.keys(this.formData.controls).forEach((key) => {
     //   this.formData.get(key)?.setErrors(null);
@@ -97,38 +98,38 @@ export class AtencionAlClienteComponent implements OnInit {
   }
 
   resetForm() {
-    // this.formData.reset();
-    this.formData.setValue({
-      name: '',
-      email: '',
-      phone: '',
-      message: '',
-      link: '',
-      genre: '',
-      newsletter: '',
-    });
+    this.formData.reset();
+    // this.formData.setValue({
+    //   name: '',
+    //   email: '',
+    //   phone: '',
+    //   message: '',
+    //   link: '',
+    //   genre: '',
+    //   newsletter: '',
+    // });
 
-    this.formData.get('name')?.clearValidators();
-    this.formData.get('name')?.updateValueAndValidity();
-    this.formData.get('name')?.addValidators(Validators.required);
-    this.formData.get('name')?.updateValueAndValidity();
+    // this.formData.get('name')?.clearValidators();
+    // this.formData.get('name')?.updateValueAndValidity();
+    // this.formData.get('name')?.addValidators(Validators.required);
+    // this.formData.get('name')?.updateValueAndValidity();
 
-    this.formData.get('email')?.clearValidators();
-    this.formData.get('email')?.updateValueAndValidity();
-    this.formData
-      .get('email')
-      ?.addValidators([Validators.required, Validators.email]);
-    this.formData.get('email')?.updateValueAndValidity();
+    // this.formData.get('email')?.clearValidators();
+    // this.formData.get('email')?.updateValueAndValidity();
+    // this.formData
+    //   .get('email')
+    //   ?.addValidators([Validators.required, Validators.email]);
+    // this.formData.get('email')?.updateValueAndValidity();
 
-    this.formData.get('message')?.clearValidators();
-    this.formData.get('message')?.updateValueAndValidity();
-    this.formData
-      .get('message')
-      ?.addValidators([
-        Validators.required,
-        Validators.minLength(20),
-        Validators.maxLength(350),
-      ]);
-    this.formData.get('message')?.updateValueAndValidity();
+    // this.formData.get('message')?.clearValidators();
+    // this.formData.get('message')?.updateValueAndValidity();
+    // this.formData
+    //   .get('message')
+    //   ?.addValidators([
+    //     Validators.required,
+    //     Validators.minLength(20),
+    //     Validators.maxLength(350),
+    //   ]);
+    // this.formData.get('message')?.updateValueAndValidity();
   }
 }
