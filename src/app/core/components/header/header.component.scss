@@ -116,6 +116,10 @@
     align-items: center;
     color: #252525;
 
+
+
+
+
     mat-icon {
       background: none;
       border: none;
@@ -127,6 +131,9 @@
         transform: scale(0.9);
       }
     }
+
+
+
 
     .mat-button {
       font-size: 15px;
@@ -152,4 +159,61 @@
   //   @media (min-width: 740px) {
   //     display: flex;
   //   }
+
+
+
+
+// mat-drawer-container {
+//   display: none;
+// }
+
+
+
+
 }
+
+
+@media (max-width: 1320px) {
+  .header__navbar {
+      display: none;
+  }
+}
+
+@media (min-width: 1320px) {
+  mat-drawer-container,
+  mat-drawer {
+      display: none;
+  }
+
+  mat-drawer-container {
+    display: none !important;
+  }
+}
+
+mat-drawer {
+  width: 32%;
+  // height: 100vh;
+  // margin: 13px 0 0 0;
+  // height: 2000px;
+}
+
+mat-drawer-container {
+  display: flex;
+    flex-basis: 33.33%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+}
+
+
+
+.drawer {
+  background-color: #252525;
+  position: fixed;
+  height: 100%;
+}
+
+// button.mat-focus-indicator.ms-2.mat-icon-button.mat-button-base{
+//   margin: 0;
+// }

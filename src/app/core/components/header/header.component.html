@@ -16,6 +16,11 @@
     </a>
   </div>
 
+
+
+
+
+
   <div class="header__navbar">
     <nav>
       <a mat-button *ngFor="let link of links" routerLink="{{ link.path }}">
@@ -31,4 +36,35 @@
       </a>
     </nav>
   </div>
+
+
+  <mat-drawer-container class="example-container" autosize>
+    <mat-toolbar color="primary" class="headerp">
+      <div class="example-sidenav-content">
+        <button mat-icon-button class="ms-2" (click)="statusMenu=!statusMenu ; drawer.toggle()">
+          <mat-icon>menu</mat-icon>
+        </button>
+      </div>
+    </mat-toolbar>
+
+  </mat-drawer-container>
+  <mat-drawer class="drawer" position="end" #drawer mode="push">
+    <button mat-icon-button class="m-3" (click)="statusMenu=!statusMenu; drawer.toggle()">
+      <mat-icon>close</mat-icon>
+    </button>
+    <div *ngIf="statusMenu" class="container p-3">
+      <section>
+        <div class="d-grid gap-4">
+          <a mat-button color="primary" routerLink="/">Home</a>
+          <a mat-button color="primary" routerLink="/productos">Productos</a>
+          <a mat-button color="primary" routerLink="/atencion-al-cliente">Contacto</a>
+          <a mat-button color="primary" routerLink="/carrito">Carrito</a>
+        </div>
+      </section>
+    </div>
+  </mat-drawer>
+
+
+
+
 </mat-toolbar>

@@ -8,6 +8,8 @@ import { CartService } from 'src/app/services/cart.service';
 })
 export class HeaderComponent implements OnInit {
   cartLenght = 0;
+  statusMenu: boolean = false;
+
 
   links = [
     {
@@ -47,4 +49,11 @@ export class HeaderComponent implements OnInit {
       .getCartLenght()
       .subscribe((data) => (this.cartLenght = data));
   };
+
+
+
+
+  BurgerMenu(status: boolean){
+    this.statusMenu = status;
+  }
 }
