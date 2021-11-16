@@ -182,6 +182,130 @@
       }
     }
   }
+
+
+
+
+
+  @media (max-width: 1485px) {
+
+
+    img.img {
+    width: 360px !important;
+    height: 360px !important;
+    }
+    }
+
+
+    @media (max-width: 1395px) {
+
+
+      img.img {
+      width: 340px !important;
+      height: 340px !important;
+      }
+      }
+
+      @media (max-width: 1295px) {
+        img.img {
+        width: 305px !important;
+        height: 305px !important;
+        }
+        }
+
+        @media (max-width: 1195px) {
+          img.img {
+          width: 275px !important;
+          height: 275px !important;
+          }
+          }
+
+          @media (max-width: 1095px) {
+            img.img {
+            width: 255px !important;
+            height: 255px !important;
+            }
+            }
+
+            @media (max-width: 995px) {
+              img.img {
+              width: 235px !important;
+              height: 235px !important;
+              }
+              }
+
+              @media (max-width: 995px) {
+
+ .photo-sections {
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding: 30px 75px 75px 75px;
+    }
+
+                img.img {
+                width: 235px !important;
+                height: 235px !important;
+
+                }
+                }
+
+
+  .photo-sections {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin: 0 0 40px 0;
+
+    .img {
+      display: flex;
+      width: 380px;
+    height: 380px;
+    cursor: pointer;
+    }
+
+
+
+
+
+.photo {
+  position: relative;
+}
+
+    .photo-title {
+      position: absolute;
+      justify-content: center;
+      align-items: center;
+      // margin: auto;
+      margin: 100px 20px;
+      padding: 10px 15px;
+      background-color: #252525;
+      color: #fff;
+      font-size: 15px;
+      font-weight: 400;
+      font-family: "Montserrat", Sans-serif;
+      cursor: pointer;
+      transition: background-color 0.4s ease;
+    }
+
+    .photo-title:hover {
+      background-color:#474747e8;
+    }
+
+
+.sale {
+ transition: background-color 0.4s ease;
+}
+
+    .sale:hover {
+      background-color:#f44336e8;
+    }
+  }
+
+
+
+
 }
 
 
