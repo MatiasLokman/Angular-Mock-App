@@ -194,6 +194,11 @@
     width: 360px !important;
     height: 360px !important;
     }
+
+    .photo{
+      width: 360px !important;
+      height: 360px !important;
+    }
     }
 
 
@@ -204,6 +209,11 @@
       width: 340px !important;
       height: 340px !important;
       }
+
+      .photo {
+        width: 340px !important;
+        height: 340px !important;
+        }
       }
 
       @media (max-width: 1295px) {
@@ -211,6 +221,11 @@
         width: 305px !important;
         height: 305px !important;
         }
+
+        .photo {
+          width: 305px !important;
+          height: 305px !important;
+          }
         }
 
         @media (max-width: 1195px) {
@@ -218,6 +233,11 @@
           width: 275px !important;
           height: 275px !important;
           }
+
+          .photo {
+            width: 275px !important;
+            height: 275px !important;
+            }
           }
 
           @media (max-width: 1095px) {
@@ -225,6 +245,11 @@
             width: 255px !important;
             height: 255px !important;
             }
+
+            .photo {
+              width: 255px !important;
+              height: 255px !important;
+              }
             }
 
             @media (max-width: 995px) {
@@ -232,6 +257,11 @@
               width: 235px !important;
               height: 235px !important;
               }
+
+              .photo {
+                width: 235px !important;
+                height: 235px !important;
+                }
               }
 
               @media (max-width: 995px) {
@@ -263,17 +293,30 @@
       width: 380px;
     height: 380px;
     cursor: pointer;
+    -webkit-transition: all 0.6s ease;
+    transition: all 0.6s ease;
+
     }
 
+    .img:hover {
+      -webkit-transform:scale(1.1);
+      transform:scale(1.1);
 
+    }
 
 
 
 .photo {
   position: relative;
+  width: 380px;
+    height: 380px;
+    overflow:hidden;
 }
 
+
+
     .photo-title {
+      z-index: 1;
       position: absolute;
       justify-content: center;
       align-items: center;
